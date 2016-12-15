@@ -32,9 +32,7 @@ def getWeather(place):
     for location in root.findall('.//{urn:cwb:gov:tw:cwbcommon:0.1}location'):
         name  = location.find('.//{urn:cwb:gov:tw:cwbcommon:0.1}locationName').text
         if place in name:
-            print(name)
             weather = location.find('.//{urn:cwb:gov:tw:cwbcommon:0.1}parameterName').text
-            print(weather)
             return weather
 
 
